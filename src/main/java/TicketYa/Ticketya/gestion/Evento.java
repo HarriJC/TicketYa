@@ -6,4 +6,5 @@ public class Evento {
     private String nombre;
     private Date fecha;
     private Date hora;
+    private String
 }
