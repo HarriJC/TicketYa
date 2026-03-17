@@ -1,3 +1,5 @@
+package TicketYa.Ticketya.GestionPago;
+
 import lombok.Getter;
 import lombok.Setter;
 
