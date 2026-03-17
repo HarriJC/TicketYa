@@ -1,3 +1,5 @@
+package TicketYa.Ticketya.venta;
+
 import TicketYa.Ticketya.venta.Comprador;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,12 +1,6 @@
 package TicketYa.Ticketya.GestionPago;
 
-import lombok.Getter;
-import lombok.Setter;
-
 import java.time.LocalDate;
-
-@Getter
-@Setter
 
 public class Pago {
     private String numeroComprobante;
@@ -14,7 +8,8 @@ public class Pago {
     private LocalDate fechaPago;
 
     // Constructor vacío
-    public Pago() {}
+    public Pago() {
+    }
 
     // Constructor completo
     public Pago(String numeroComprobante, double valorPagado, LocalDate fechaPago) {
@@ -23,11 +18,24 @@ public class Pago {
         this.fechaPago = fechaPago;
     }
 
+    // Getters
+    public String getNumeroComprobante() { return numeroComprobante; }
+    public double getValorPagado() { return valorPagado; }
+    public LocalDate getFechaPago() { return fechaPago; }
 
+    // Setters
+    public void setNumeroComprobante(String numeroComprobante) { this.numeroComprobante = numeroComprobante; }
+    public void setValorPagado(double valorPagado) { this.valorPagado = valorPagado; }
+    public void setFechaPago(LocalDate fechaPago) { this.fechaPago = fechaPago; }
 
-    public boolean PagoRealizado() {
+    // Métodos útiles
+    public boolean esPagoRealizado() {
         return fechaPago != null &&
                 (fechaPago.isBefore(LocalDate.now()) || fechaPago.isEqual(LocalDate.now()));
+    }
+
+    public double aplicarDescuento(double porcentaje) {
+        return valorPagado - (valorPagado * porcentaje / 100);
     }
 
     public String mostrarResumen() {
@@ -38,10 +46,8 @@ public class Pago {
 
     @Override
     public String toString() {
-        return "Pago{" +
-                "numeroComprobante='" + numeroComprobante + '\'' +
-                ", valorPagado=" + valorPagado +
-                ", fechaPago=" + fechaPago +
-                '}';
+        return "Pago{numeroComprobante='" + numeroComprobante +
+                "', valorPagado=" + valorPagado +
+                ", fechaPago=" + fechaPago + "}";
     }
 }
