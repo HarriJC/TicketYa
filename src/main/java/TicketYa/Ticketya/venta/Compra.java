@@ -1,14 +1,12 @@
 package TicketYa.Ticketya.venta;
 
-import TicketYa.Ticketya.venta.Comprador;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.time.LocalDate;
 @Getter
 @Setter
-@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 
 public class Compra {
     private LocalDate fechaCompra;
@@ -17,14 +15,6 @@ public class Compra {
 
     // Relación de composición con Comprador
     private Comprador comprador;
-
-                                                                                                                                                                                                                                                                            // Constructor
-    public Compra(LocalDate fechaCompra, double valorTotal, String estadoCompra, Comprador comprador) {
-        this.fechaCompra = fechaCompra;
-        this.valorTotal = valorTotal;
-        this.estadoCompra = estadoCompra;
-        this.comprador = comprador;
-    }
 
 
     @Override

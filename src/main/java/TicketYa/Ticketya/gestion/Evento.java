@@ -16,6 +16,10 @@ public class Evento {
     private String lugar;
     private String patrocinador;
 
+    public Evento() {
+
+    }
+
     public void crearEvento() {
         System.out.println("Evento creado: " + nombreEvento);
     }

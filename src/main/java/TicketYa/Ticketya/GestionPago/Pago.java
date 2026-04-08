@@ -2,20 +2,19 @@ package TicketYa.Ticketya.GestionPago;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
+
 public class Pago {
     private String numeroComprobante;
     private double valorPagado;
     private LocalDate fechaPago;
-
-    // Constructor vacío
-    public Pago() {
-    }
 
 
     // Métodos útiles

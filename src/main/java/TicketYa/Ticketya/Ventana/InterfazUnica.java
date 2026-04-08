@@ -242,7 +242,8 @@ public class InterfazUnica extends JFrame {
         btn.addActionListener(e -> {
             if (zona == null) { mostrarError("Primero crea una Zona"); return; }
             try {
-                Boleta boleta = new Boleta();
+                Boleta boleta;
+                boleta = new Boleta();
                 boleta.setEstado(Integer.parseInt(txtBoletaEstado.getText()));
                 boleta.setTotalBoletas(Integer.parseInt(txtBoletaTotal.getText()));
                 boleta.setZonas(new ArrayList<>());

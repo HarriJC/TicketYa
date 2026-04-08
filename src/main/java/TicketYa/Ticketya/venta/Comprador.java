@@ -1,23 +1,15 @@
 package TicketYa.Ticketya.venta;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
+@AllArgsConstructor
+
 public class Comprador {
     private String nombre;
     private int identificacion;
 
-    // Constructor vacío
-    public Comprador() {
-    }
-
-    // Constructor completo
-    public Comprador(String nombre, int identificacion) {
-        this.nombre = nombre;
-        this.identificacion = identificacion;
-    }
 
   
 
