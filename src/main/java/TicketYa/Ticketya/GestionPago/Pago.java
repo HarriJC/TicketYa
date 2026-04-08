@@ -1,7 +1,13 @@
 package TicketYa.Ticketya.GestionPago;
 
-import java.time.LocalDate;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.time.LocalDate;
+@Getter
+@Setter
+@AllArgsConstructor
 public class Pago {
     private String numeroComprobante;
     private double valorPagado;
@@ -11,22 +17,6 @@ public class Pago {
     public Pago() {
     }
 
-    // Constructor completo
-    public Pago(String numeroComprobante, double valorPagado, LocalDate fechaPago) {
-        this.numeroComprobante = numeroComprobante;
-        this.valorPagado = valorPagado;
-        this.fechaPago = fechaPago;
-    }
-
-    // Getters
-    public String getNumeroComprobante() { return numeroComprobante; }
-    public double getValorPagado() { return valorPagado; }
-    public LocalDate getFechaPago() { return fechaPago; }
-
-    // Setters
-    public void setNumeroComprobante(String numeroComprobante) { this.numeroComprobante = numeroComprobante; }
-    public void setValorPagado(double valorPagado) { this.valorPagado = valorPagado; }
-    public void setFechaPago(LocalDate fechaPago) { this.fechaPago = fechaPago; }
 
     // Métodos útiles
     public boolean esPagoRealizado() {

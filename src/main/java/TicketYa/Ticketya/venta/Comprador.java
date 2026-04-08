@@ -1,5 +1,10 @@
 package TicketYa.Ticketya.venta;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class Comprador {
     private String nombre;
     private int identificacion;
@@ -14,13 +19,7 @@ public class Comprador {
         this.identificacion = identificacion;
     }
 
-    // Getters
-    public String getNombre()       { return nombre; }
-    public int getIdentificacion()  { return identificacion; }
-
-    // Setters
-    public void setNombre(String nombre)             { this.nombre = nombre; }
-    public void setIdentificacion(int identificacion){ this.identificacion = identificacion; }
+  
 
     @Override
     public String toString() {

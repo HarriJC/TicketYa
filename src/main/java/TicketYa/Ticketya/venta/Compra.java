@@ -18,7 +18,7 @@ public class Compra {
     // Relación de composición con Comprador
     private Comprador comprador;
 
-    // Constructor
+                                                                                                                                                                                                                                                                            // Constructor
     public Compra(LocalDate fechaCompra, double valorTotal, String estadoCompra, Comprador comprador) {
         this.fechaCompra = fechaCompra;
         this.valorTotal = valorTotal;

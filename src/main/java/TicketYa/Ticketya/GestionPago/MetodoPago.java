@@ -1,5 +1,10 @@
 package TicketYa.Ticketya.GestionPago;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class MetodoPago {
 
     private String tipo;
@@ -14,14 +19,6 @@ public class MetodoPago {
         this.tipo = tipo;
         this.descripcion = descripcion;
     }
-
-    // Getters
-    public String getTipo()        { return tipo; }
-    public String getDescripcion() { return descripcion; }
-
-    // Setters
-    public void setTipo(String tipo)               { this.tipo = tipo; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
 
 
     public void procesarPago(Pago pago) {
