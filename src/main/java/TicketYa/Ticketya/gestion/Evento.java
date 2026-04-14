@@ -1,14 +1,10 @@
 package TicketYa.Ticketya.gestion;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-
+import lombok.*;
 import java.util.Date;
-@Getter
-@Setter
-@AllArgsConstructor
+import java.text.SimpleDateFormat;
 
+@Getter @Setter @NoArgsConstructor @AllArgsConstructor
 public class Evento {
     private String nombreEvento;
     private Date fecha;
@@ -16,20 +12,28 @@ public class Evento {
     private String lugar;
     private String patrocinador;
 
-    public Evento() {
+    // Campos para las secciones (Imagen de referencia)
+    private int cantVip;
+    private int cantPlatea;
+    private int cantGeneral;
+    private double precioVip;
+    private double precioPlatea;
+    private double precioGeneral;
 
-    }
-
-    public void crearEvento() {
-        System.out.println("Evento creado: " + nombreEvento);
-    }
+    private String estado = "ACTIVO";
 
     @Override
     public String toString() {
-        return "Evento{nombreEvento='" + nombreEvento +
-                "', fecha=" + fecha +
-                ", hora=" + hora +
-                ", lugar='" + lugar +
-                "', patrocinador='" + patrocinador + "'}";
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat stf = new SimpleDateFormat("HH:mm");
+
+        // Formato visual alineado para la lista
+        return String.format("%-15s | %-10s | %s | %-10s | VIP: %-3d | PLT: %-3d | GEN: %-3d | %s",
+                nombreEvento.toUpperCase(),
+                lugar.toUpperCase(),
+                sdf.format(fecha),
+                patrocinador.toUpperCase(),
+                cantVip, cantPlatea, cantGeneral,
+                estado);
     }
 }
